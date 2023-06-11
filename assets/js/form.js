@@ -19,7 +19,7 @@ $(function() {
         e.preventDefault();
 
         grecaptcha.ready(function() {
-            grecaptcha.execute('6Ld1dMwbAAAAALM4WzgGBZzCrxpDwPOpVbViieC-', {action: 'submit'}).then(function(token) {
+            grecaptcha.execute('6LeXSoomAAAAAMUViqOsxvu4Er3XukyU1Am4-jC0', {action: 'submit'}).then(function(token) {
 
                 var msgSending = form.attr("msg-sending");
                 var msgSuccess = form.attr("msg-success");
@@ -44,7 +44,6 @@ $(function() {
                     data: formData
                 })
                     .done(function(response) {
-                        console.log("Hola!!!")
                         if (response.status == "success") {
                             // Make sure that the formMessages div has the 'success' class.
                             form_msg('bg-success', msgSuccess);
