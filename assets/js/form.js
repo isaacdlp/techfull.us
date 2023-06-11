@@ -44,6 +44,7 @@ $(function() {
                     data: formData
                 })
                     .done(function(response) {
+                        console.log("Hola!!!")
                         if (response.status == "success") {
                             // Make sure that the formMessages div has the 'success' class.
                             form_msg('bg-success', msgSuccess);
