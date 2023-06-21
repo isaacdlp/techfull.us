@@ -6,6 +6,7 @@ function form_msg(status, message) {
     $(formMessages).removeClass('bg-success');
     $(formMessages).addClass(status);
     $(formMessages).text(message);
+    $(formMessages).delay(5000).fadeOut(400)
 }
 
 $(function() {
