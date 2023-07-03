@@ -16,7 +16,7 @@
 		<meta name='twitter:image' content="https://techfull.us/hero.jpg"/>
 		<meta property='og:image' content="https://techfull.us/hero.jpg"/>
 	</head>
-	<body>
+	<body class="eupopup eupopup-bottomleft">
 
 	<!-- Header -->
 	<header id="header" class="alt">
@@ -263,7 +263,12 @@
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="copyright">
-			&copy; 2023 Techfull LLC. All rights reserved.
+			<p><b>
+				<a style="text-decoration: none;" href="legal/privacy_policy.html">Privacy Policy</a> &bull;
+				<a style="text-decoration: none;" href="legal/terms_service.html">Terms of Service</a> &bull;
+				<a style="text-decoration: none;" href="legal/cookie_policy.html">Cookie Policy</a>
+			</b></p>
+			<p>&copy; 2023 Techfull LLC. All rights reserved.</p>
 		</div>
 	</footer>
 
@@ -291,6 +296,27 @@
 		gtag('js', new Date());
 		gtag('config', 'G-Q05NRP711H');
 	</script>
+
+	<!-- Cookies banner -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery-eu-cookie-law-popup.css"/>
+	<script src="assets/js/jquery-eu-cookie-law-popup.js"></script>
+	<script>
+		$(document).ready( function() {
+			if ($(".eupopup").length > 0) {
+				$(document).euCookieLawPopup().init({
+					'buttonContinueTitle' : 'Continue',
+					'buttonLearnmoreTitle' : 'Cookie Policy',
+					'cookiePolicyUrl' : 'legal/cookie_policy.html'
+				});
+			}
+		});
+	</script>
+	<style>
+		.eupopup-button {
+			text-decoration: none;
+		}
+	</style>
 
 	</body>
 </html>
